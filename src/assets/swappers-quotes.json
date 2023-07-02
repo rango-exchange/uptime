@@ -1,0 +1,106 @@
+{
+    "quotes": [
+        {
+            "swappers": ["Hyphen"],
+            "from": "BSC.USDT--0x55d398326f99059ff775485246999027b3197955",
+            "to": "POLYGON.USDT--0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+            "amount": "100000000000000000000"      
+        },
+        {
+            "swappers": ["XY Finance"],
+            "from": "BSC.USDT--0x55d398326f99059ff775485246999027b3197955",
+            "to": "POLYGON.USDT--0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+            "amount": "100000000000000000000"      
+        },
+        {
+            "swappers": ["AllBridge"],
+            "from": "BSC.BUSD--0xe9e7cea3dedca5984780bafc599bd69add087d56",
+            "to": "POLYGON.USDC--0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+            "amount": "100000000000000000000"      
+        },
+        {
+            "swappers": ["stargate"],
+            "from": "BSC.USDT--0x55d398326f99059ff775485246999027b3197955",
+            "to": "POLYGON.USDT--0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+            "amount": "100000000000000000000"      
+        },
+        {
+            "swappers": ["Across"],
+            "from": "ETH.USDT--0xdac17f958d2ee523a2206206994597c13d831ec7",
+            "to": "POLYGON.USDT--0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+            "amount": "100000000"      
+        },
+        {
+            "swappers": ["Satellite"],
+            "from": "ETH.USDC--0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+            "to": "POLYGON.AXLUSDC--0x750e4c4984a9e0f12978ea6742bc1c5d248f40ed",
+            "amount": "100000000"      
+        },
+        {
+            "swappers": ["Synapse Bridge"],
+            "from": "ETH.USDT--0xdac17f958d2ee523a2206206994597c13d831ec7",
+            "to": "ARBITRUM.USDT--0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+            "amount": "100000000"      
+        },
+        {
+            "swappers": ["Avalanche Bridge"],
+            "from": "ETH.USDT--0xdac17f958d2ee523a2206206994597c13d831ec7",
+            "to": "AVAX_CCHAIN.USDT.E--0xc7198437980c041c805a1edcba50c1ce5db95118",
+            "amount": "100000000"      
+        },
+        {
+            "swappers": ["Optimism Bridge"],
+            "from": "ETH.USDC--0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+            "to": "OPTIMISM.USDC--0x7f5c764cbc14f9669b88837ca1490cca17c31607",
+            "amount": "100000000"      
+        },
+        {
+            "swappers": ["Orbiter"],
+            "from": "POLYGON.DAI--0x8f3cf7ad23cd3cadbd9735aff958023239c6a063",
+            "to": "STARKNET.DAI--0xda114221cb83fa859dbdb4c44beeaa0bb37c7537ad5ae66fe5e0efd20e6eb3",
+            "amount": "100000000000000000000"      
+        },
+        {
+            "swappers": ["Symbiosis"],
+            "from": "AVAX_CCHAIN.USDC.E--0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664",
+            "to": "ZKSYNC.USDC--0x3355df6d4c9c3035724fd0e3914de96a5a83aaf4",
+            "amount": "100000000"      
+        },
+        {
+            "swappers": ["Rainbow Bridge"],
+            "from": "ETH.ETH",
+            "to": "AURORA.ETH",
+            "amount": "100000000000000000"      
+        },
+        {
+            "swappers": ["ThorChain"],
+            "from": "ETH.ETH",
+            "to": "AVAX_CCHAIN.AVAX",
+            "amount": "100000000000000000"      
+        },
+        {
+            "swappers": ["IBC"],
+            "from": "COSMOS.ATOM",
+            "to": "OSMOSIS.ATOM--ibc/27394fb092d2eccd56123c74f36e4c1f926001ceada9ca97ea622b25f41e5eb2",
+            "amount": "100000000"      
+        },
+        {
+            "swappers": ["Wormhole"],
+            "from": "ETH.USDC--0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+            "to": "FANTOM.USDC--0x2ec752329c3eb419136ca5e4432aa2cdb1ea23e6",
+            "amount": "100000000"      
+        },
+        {
+            "swappers": ["Arbitrum Bridge"],
+            "from": "ETH.DAI--0x6b175474e89094c44da98b954eedeac495271d0f",
+            "to": "ARBITRUM.DAI--0xda10009cbd5d07dd0cecc66161fc93d7c9000da1",
+            "amount": "100000000"      
+        },
+        {
+            "swappers": ["cBridge v2.0"],
+            "from": "AVAX_CCHAIN.USDC.E--0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664",
+            "to": "AURORA.USDC--0xb12bfca5a55806aaf64e99521918a4bf0fc40802",
+            "amount": "100000000"      
+        }
+    ]
+}

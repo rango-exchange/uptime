@@ -1,0 +1,38 @@
+name: Update UptimeRobot Monitors
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Install Dependencies
+        run: pip install -r requirements.txt
+        shell: bash
+
+      - name: Check all rango routes valid
+        id: check-routes
+        run: python src/check.py
+        shell: bash
+        env:
+          RANGO_API_KEY: ${{ secrets.RANGO_API_KEY }}
+          UPTIME_ROBOT_API_KEY: ${{ secrets.UPTIME_ROBOT_API_KEY }}
+
+      - name: Update all uptime robot monitors
+        id: update-monitors
+        run: python src/update.py
+        shell: bash
+        env:
+          RANGO_API_KEY: ${{ secrets.RANGO_API_KEY }}
+          UPTIME_ROBOT_API_KEY: ${{ secrets.UPTIME_ROBOT_API_KEY }}
