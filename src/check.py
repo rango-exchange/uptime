@@ -16,20 +16,21 @@ def get_route(src, dest, amount, swappers, slippage):
         'from': src,
         'to': dest,
         'amount': amount,
-        'swappers': swappers,
+        'swappers': ','.join(swappers),
         'slippage': slippage,
         'apiKey': RANGO_API_KEY
     }
 
-    payload = urllib.parse.urlencode(params)
-    response = requests.request("GET", url, params=params)
+    url += urllib.parse.urlencode(params)
+    response = requests.request("GET", url)
     result = response.json()
     resultType = result["resultType"]
     # print(f'{src} => {dest} => {resultType}')
     print(f'{swappers[0]} => {resultType}')
     if resultType != 'OK':
+        print(url)
         print(response.text)
-        raise Exception(f'Route not found for: {swappers}')
+        raise Exception(f'Route not found for: {",".join(swappers)}')
 
 routes_list = json.loads(open('src/assets/quotes.json').read())['quotes']
 
