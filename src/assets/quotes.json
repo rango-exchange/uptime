@@ -81,7 +81,7 @@
         {
             "swappers": ["IBC"],
             "from": "COSMOS.ATOM",
-            "to": "OSMOSIS.ATOM--ibc%2F27394fb092d2eccd56123c74f36e4c1f926001ceada9ca97ea622b25f41e5eb2",
+            "to": "OSMOSIS.ATOM--ibc/27394fb092d2eccd56123c74f36e4c1f926001ceada9ca97ea622b25f41e5eb2",
             "amount": "100000000"      
         },
         {
