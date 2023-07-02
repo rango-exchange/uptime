@@ -30,8 +30,8 @@ def get_route(src, dest, amount, swappers, slippage):
     if resultType != 'OK':
         raise Exception(f'Route not found for: {swappers.join()}')
 
-routes_list = json.loads(open('assets/quotes.json').read())['quotes']
-routes_list.reverse()
+routes_list = json.loads(open('src/assets/quotes.json').read())['quotes']
+
 for route in routes_list:
     get_route(route['from'], route['to'], route['amount'], route['swappers'], 3)
     time.sleep(0.5)
