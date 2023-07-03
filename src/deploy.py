@@ -35,7 +35,7 @@ for route in routes_list:
     swappers = '-'.join(route['swappers'])
     monitor_url = url
     monitor_name = f'{swappers} Swap'
-    keyword_value = "OK"
+    keyword_value = "txTo"
     interval = "300"
 
     client.create_or_update_monitor(monitor_name, monitor_url, keyword_value, interval)
