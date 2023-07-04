@@ -16,7 +16,7 @@ if not UPTIME_ROBOT_API_KEY:
 client = UptimeRobot(api_key=UPTIME_ROBOT_API_KEY)
 monitors = client.get_all_monitors()
 
-routes_list = get_sample_routes()
+routes_list = get_sample_routes()['bridges'] + get_sample_routes()['dexes']
 
 for route in routes_list:
     url = get_rango_quote_url(RANGO_API_KEY, route['from'], route['to'], route['amount'], route['swappers'], 3)
