@@ -144,13 +144,13 @@
             "swappers": ["TrisolarisSwap"],
             "from": "AURORA.USDC--0xb12bfca5a55806aaf64e99521918a4bf0fc40802",
             "to": "AURORA.ETH",
-            "amount": "10000000000"      
+            "amount": "10000000"      
         },
         {
             "swappers": ["AuroraSwap"],
             "from": "AURORA.USDC--0xb12bfca5a55806aaf64e99521918a4bf0fc40802",
             "to": "AURORA.ETH",
-            "amount": "10000000000"      
+            "amount": "1000000000"      
         },
         {
             "swappers": ["SpookySwap"],

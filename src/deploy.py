@@ -35,7 +35,17 @@ for route in routes_list:
     swappers = '-'.join(route['swappers'])
     monitor_url = url
     monitor_name = f'{swappers} Swap'
+    from_blockchain = route['from'].split('.')[0]
     keyword_value = "txTo"
+    if from_blockchain in ['OSMOSIS', 'COSMOS', 'KUJIRA',  'JUNO']:
+        keyword_value = 'signType'
+    elif from_blockchain in ['SOLANA']:
+        keyword_value = 'txType'
+    elif from_blockchain in ['TRON']:
+        keyword_value = 'raw_data'
+    elif from_blockchain in ['STARKNET']:
+        keyword_value = 'calls'
+
     interval = "300"
 
     client.create_or_update_monitor(monitor_name, monitor_url, keyword_value, interval)
