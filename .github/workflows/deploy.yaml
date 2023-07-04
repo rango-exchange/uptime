@@ -31,7 +31,7 @@ jobs:
 
       - name: Update all uptime robot monitors
         id: update-monitors
-        run: python src/deployw.py
+        run: python src/deploy.py
         shell: bash
         env:
           RANGO_API_KEY: ${{ secrets.RANGO_API_KEY }}
