@@ -39,7 +39,7 @@
         {
             "swappers": ["Synapse Bridge"],
             "from": "ETH.USDT--0xdac17f958d2ee523a2206206994597c13d831ec7",
-            "to": "ARBITRUM.USDT--0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+            "to": "AVAX_CCHAIN.USDT--0xc7198437980c041c805a1edcba50c1ce5db95118",
             "amount": "100000000"      
         },
         {
@@ -62,8 +62,8 @@
         },
         {
             "swappers": ["Symbiosis"],
-            "from": "AVAX_CCHAIN.USDC.E--0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664",
-            "to": "ZKSYNC.USDC--0x3355df6d4c9c3035724fd0e3914de96a5a83aaf4",
+            "from": "ZKSYNC.USDC--0x3355df6d4c9c3035724fd0e3914de96a5a83aaf4",
+            "to": "OPTIMISM.USDC--0x7f5c764cbc14f9669b88837ca1490cca17c31607",
             "amount": "100000000"      
         },
         {

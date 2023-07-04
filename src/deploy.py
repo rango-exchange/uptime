@@ -59,3 +59,27 @@ swappers_monitors_ids = [
     or ('Swap' in monitor['friendly_name'] and 'Basic' not in monitor['friendly_name'])
 ]
 client.create_or_update_psp('Rango Swappers', swappers_monitors_ids)
+
+
+monitors = client.get_all_monitors()
+swappers_monitors_ids = [
+    str(monitor['id']) for monitor in monitors 
+    if ('Quote' in monitor['friendly_name'] and 'Basic' not in monitor['friendly_name'])
+    or ('Swap' in monitor['friendly_name'] and 'Basic' not in monitor['friendly_name'])
+]
+client.create_or_update_psp('Rango Swappers', swappers_monitors_ids)
+
+
+monitors = client.get_all_monitors()
+swappers_monitors_ids = [
+    str(monitor['id']) for monitor in monitors 
+    if ('Quote' in monitor['friendly_name'] and 'Basic' not in monitor['friendly_name'])
+]
+client.create_or_update_psp('Rango Swappers > Quote', swappers_monitors_ids)
+
+monitors = client.get_all_monitors()
+swappers_monitors_ids = [
+    str(monitor['id']) for monitor in monitors 
+    if ('Swap' in monitor['friendly_name'] and 'Basic' not in monitor['friendly_name'])
+]
+client.create_or_update_psp('Rango Swappers > Swap', swappers_monitors_ids)
