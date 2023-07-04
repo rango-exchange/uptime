@@ -36,3 +36,5 @@ jobs:
         env:
           RANGO_API_KEY: ${{ secrets.RANGO_API_KEY }}
           UPTIME_ROBOT_API_KEY: ${{ secrets.UPTIME_ROBOT_API_KEY }}
+          UPTIME_ROBOT_PSP_BASE_URL: ${{ secrets.UPTIME_ROBOT_PSP_BASE_URL }}
+          UPTIME_ROBOT_PSP_PASSWORD: ${{ secrets.UPTIME_ROBOT_PSP_PASSWORD }}
