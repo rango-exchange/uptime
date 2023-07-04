@@ -80,6 +80,16 @@ class UptimeRobot:
             print(f"No monitor found for {name}, creating new monitor ...")
             self.create_monitor(name, url, keyword, interval)
 
+    def delete_monitor(self, id):
+        url = "https://api.uptimerobot.com/v2/deleteMonitor"
+        payload = f"api_key={self.api_key}&format=json&id={id}"
+        headers = {
+            'cache-control': "no-cache",
+            'content-type': "application/x-www-form-urlencoded"
+        }
+        response = requests.request("POST", url, data=payload, headers=headers)
+        print(f'status: {response.status_code}')
+
     def get_all_psps(self):
         url = "https://api.uptimerobot.com/v2/getPSPs"
         payload = f"api_key={self.api_key}&format=json"
