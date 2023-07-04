@@ -53,9 +53,9 @@ def get_quote_or_throw_exception(apy_key, src, dest, amount, swappers, slippage)
     result_type = result["resultType"]
     # print(url)
     print(f'{swappers[0]} => {result_type}')
-    # if result_type != 'OK':
-    #     print(f'{swappers}: {src} => {dest} [result = {result_type}]')
-    #     raise Exception(f'Route not found for: {swappers}')
+    if result_type != 'OK':
+        print(f'{swappers}: {src} => {dest} [result = {result_type}]')
+        raise Exception(f'Route not found for: {swappers}')
 
 def get_swap_or_throw_exception(apy_key, src, dest, amount, swappers, slippage):
     url = get_rango_swap_url(apy_key, src, dest, amount, swappers, slippage)

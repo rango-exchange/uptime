@@ -6,15 +6,22 @@ class UptimeRobot:
         self.api_key = api_key
 
     def get_all_monitors(self):
-        url = "https://api.uptimerobot.com/v2/getMonitors"
-        payload = f"api_key={self.api_key}&format=json&logs=1"
-        headers = {
-            'content-type': "application/x-www-form-urlencoded",
-            'cache-control': "no-cache"
-        }
-        response = requests.request("POST", url, data=payload, headers=headers)
-        monitors = response.json()['monitors']
-        return monitors
+        result = []
+        offset = 0
+        while True:
+            url = "https://api.uptimerobot.com/v2/getMonitors"
+            payload = f"api_key={self.api_key}&format=json&logs=1&offset={offset}"
+            headers = {
+                'content-type': "application/x-www-form-urlencoded",
+                'cache-control': "no-cache"
+            }
+            response = requests.request("POST", url, data=payload, headers=headers)
+            monitors = response.json()
+            result += monitors['monitors']
+            offset += 50
+            if (len(monitors['monitors']) < 50):
+                break
+        return result
 
     def get_monitor_id(self, all_monitors, monitor_name):
         for monitor in all_monitors:
