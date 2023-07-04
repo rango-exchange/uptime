@@ -1,0 +1,312 @@
+{
+    "bridges": [
+        {
+            "swappers": ["Hyphen"],
+            "from": "BSC.USDT--0x55d398326f99059ff775485246999027b3197955",
+            "to": "POLYGON.USDT--0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+            "amount": "100000000000000000000"      
+        },
+        {
+            "swappers": ["XY Finance"],
+            "from": "BSC.USDT--0x55d398326f99059ff775485246999027b3197955",
+            "to": "POLYGON.USDT--0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+            "amount": "100000000000000000000"      
+        },
+        {
+            "swappers": ["AllBridge"],
+            "from": "BSC.BUSD--0xe9e7cea3dedca5984780bafc599bd69add087d56",
+            "to": "POLYGON.USDC--0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+            "amount": "100000000000000000000"      
+        },
+        {
+            "swappers": ["stargate"],
+            "from": "BSC.USDT--0x55d398326f99059ff775485246999027b3197955",
+            "to": "POLYGON.USDT--0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+            "amount": "100000000000000000000"      
+        },
+        {
+            "swappers": ["Across"],
+            "from": "ETH.USDT--0xdac17f958d2ee523a2206206994597c13d831ec7",
+            "to": "POLYGON.USDT--0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+            "amount": "100000000"      
+        },
+        {
+            "swappers": ["Satellite"],
+            "from": "ETH.USDC--0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+            "to": "POLYGON.AXLUSDC--0x750e4c4984a9e0f12978ea6742bc1c5d248f40ed",
+            "amount": "100000000"      
+        },
+        {
+            "swappers": ["Synapse Bridge"],
+            "from": "ETH.USDT--0xdac17f958d2ee523a2206206994597c13d831ec7",
+            "to": "ARBITRUM.USDT--0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+            "amount": "100000000"      
+        },
+        {
+            "swappers": ["Avalanche Bridge"],
+            "from": "ETH.USDT--0xdac17f958d2ee523a2206206994597c13d831ec7",
+            "to": "AVAX_CCHAIN.USDT.E--0xc7198437980c041c805a1edcba50c1ce5db95118",
+            "amount": "100000000"      
+        },
+        {
+            "swappers": ["Optimism Bridge"],
+            "from": "ETH.USDC--0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+            "to": "OPTIMISM.USDC--0x7f5c764cbc14f9669b88837ca1490cca17c31607",
+            "amount": "100000000"      
+        },
+        {
+            "swappers": ["Orbiter"],
+            "from": "POLYGON.DAI--0x8f3cf7ad23cd3cadbd9735aff958023239c6a063",
+            "to": "STARKNET.DAI--0xda114221cb83fa859dbdb4c44beeaa0bb37c7537ad5ae66fe5e0efd20e6eb3",
+            "amount": "100000000000000000000"      
+        },
+        {
+            "swappers": ["Symbiosis"],
+            "from": "AVAX_CCHAIN.USDC.E--0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664",
+            "to": "ZKSYNC.USDC--0x3355df6d4c9c3035724fd0e3914de96a5a83aaf4",
+            "amount": "100000000"      
+        },
+        {
+            "swappers": ["Rainbow Bridge"],
+            "from": "ETH.ETH",
+            "to": "AURORA.ETH",
+            "amount": "100000000000000000"      
+        },
+        {
+            "swappers": ["ThorChain"],
+            "from": "ETH.ETH",
+            "to": "AVAX_CCHAIN.AVAX",
+            "amount": "100000000000000000"      
+        },
+        {
+            "swappers": ["IBC"],
+            "from": "COSMOS.ATOM",
+            "to": "OSMOSIS.ATOM--ibc/27394fb092d2eccd56123c74f36e4c1f926001ceada9ca97ea622b25f41e5eb2",
+            "amount": "100000000"      
+        },
+        {
+            "swappers": ["Wormhole"],
+            "from": "ETH.USDC--0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+            "to": "FANTOM.USDC--0x2ec752329c3eb419136ca5e4432aa2cdb1ea23e6",
+            "amount": "100000000"      
+        },
+        {
+            "swappers": ["Arbitrum Bridge"],
+            "from": "ETH.DAI--0x6b175474e89094c44da98b954eedeac495271d0f",
+            "to": "ARBITRUM.DAI--0xda10009cbd5d07dd0cecc66161fc93d7c9000da1",
+            "amount": "100000000"      
+        },
+        {
+            "swappers": ["cBridge v2.0"],
+            "from": "AVAX_CCHAIN.USDC.E--0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664",
+            "to": "AURORA.USDC--0xb12bfca5a55806aaf64e99521918a4bf0fc40802",
+            "amount": "100000000"      
+        },
+        {
+            "swappers": ["DeBridge"],
+            "from": "BSC.USDC--0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+            "to": "POLYGON.USDC--0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+            "amount": "100000000000000000000"      
+        }
+    ],
+    "dexes": [
+        {
+            "swappers": ["SushiHarmony"],
+            "from": "HARMONY.BUSD--0xe176ebe47d621b984a73036b9da5d834411ef734",
+            "to": "HARMONY.ONE",
+            "amount": "100000000000000000000"      
+        },
+        {
+            "swappers": ["SushiArbitrum"],
+            "from": "ARBITRUM.USDT--0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+            "to": "ARBITRUM.ETH",
+            "amount": "100000000"      
+        },
+        {
+            "swappers": ["Synapse Swapper"],
+            "from": "BSC.USDT--0x55d398326f99059ff775485246999027b3197955",
+            "to": "BSC.BUSD--0xe9e7cea3dedca5984780bafc599bd69add087d56",
+            "amount": "100000000000000000000"      
+        },
+        {
+            "swappers": ["ViperSwap"],
+            "from": "HARMONY.1USDC--0x985458e523db3d53125813ed68c274899e9dfab4",
+            "to": "HARMONY.ONE",
+            "amount": "100000000"      
+        },
+        {
+            "swappers": ["Osmosis"],
+            "from": "OSMOSIS.USDC--ibc/d189335c6e4a68b513c10ab227bf1c1d38c746766278ba3eeb4fb14124f1d858",
+            "to": "OSMOSIS.OSMO",
+            "amount": "100000000"      
+        },
+        {
+            "swappers": ["TrisolarisSwap"],
+            "from": "AURORA.USDC--0xb12bfca5a55806aaf64e99521918a4bf0fc40802",
+            "to": "AURORA.ETH",
+            "amount": "10000000000"      
+        },
+        {
+            "swappers": ["AuroraSwap"],
+            "from": "AURORA.USDC--0xb12bfca5a55806aaf64e99521918a4bf0fc40802",
+            "to": "AURORA.ETH",
+            "amount": "10000000000"      
+        },
+        {
+            "swappers": ["SpookySwap"],
+            "from": "FANTOM.USDC--0x04068da6c83afcfa0e13ba15a6696662335d5b75",
+            "to": "FANTOM.FTM",
+            "amount": "10000000000"      
+        },
+        {
+            "swappers": ["PancakeSwapBsc"],
+            "from": "BSC.USDC--0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+            "to": "BSC.BNB",
+            "amount": "100000000000000000000"      
+        },
+        {
+            "swappers": ["SunSwap"],
+            "from": "TRON.USDT--TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t",
+            "to": "TRON.TRX",
+            "amount": "100000000"      
+        },
+        {
+            "swappers": ["FinKujira"],
+            "from": "KUJIRA.AXLUSDC--ibc/295548a78785a1007f232de286149a6ff512f180af5657780fc89c009e2c348f",
+            "to": "KUJIRA.KUJI",
+            "amount": "100000000"      
+        },
+        {
+            "swappers": ["QuickSwap"],
+            "from": "POLYGON.USDT--0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+            "to": "POLYGON.MATIC",
+            "amount": "100000000"      
+        },
+        {
+            "swappers": ["OkcSwap"],
+            "from": "OKC.USDT--0x382bb369d343125bfb2117af9c149795c6c65c50",
+            "to": "OKC.USDC--0xc946daf81b08146b1c7a8da2a851ddf2b3eaaf85",
+            "amount": "100000000000000000000"      
+        },
+        {
+            "swappers": ["CherrySwap"],
+            "from": "OKC.USDC--0xc946daf81b08146b1c7a8da2a851ddf2b3eaaf85",
+            "to": "OKC.USDT--0x382bb369d343125bfb2117af9c149795c6c65c50",
+            "amount": "100000000000000000000"      
+        },
+        {
+            "swappers": ["WYNDDex"],
+            "from": "JUNO.USDC--ibc/eac38d55372f38f1afd68df7fe9ef762dcf69f26520643cf3f9d292a738d8034",
+            "to": "JUNO.JUNO",
+            "amount": "100000000"      
+        },
+        {
+            "swappers": ["SolanaWrapper"],
+            "from": "SOLANA.SOL",
+            "to": "SOLANA.WSOL--So11111111111111111111111111111111111111112",
+            "amount": "100000000"
+        },
+        {
+            "swappers": ["PangolinSwap"],
+            "from": "AVAX_CCHAIN.USDT.E--0xc7198437980c041c805a1edcba50c1ce5db95118",
+            "to": "AVAX_CCHAIN.AVAX",
+            "amount": "100000000"      
+        },
+        {
+            "swappers": ["Mojito"],
+            "from": "KCC.USDT--0x0039f574ee5cc39bdd162e9a88e3eb1f111baf48",
+            "to": "KCC.ETH--0xf55af137a98607f7ed2efefa4cd2dfe70e4253b1",
+            "amount": "100000000000000000000"      
+        },
+        {
+            "swappers": ["SpiritSwapV2"],
+            "from": "FANTOM.USDC--0x04068da6c83afcfa0e13ba15a6696662335d5b75",
+            "to": "FANTOM.DAI--0x8d11ec38a3eb5e956b052f67da8bdc9bef8abf3e",
+            "amount": "100000000"      
+        },
+        {
+            "swappers": ["SpiritSwapV1"],
+            "from": "FANTOM.USDC--0x04068da6c83afcfa0e13ba15a6696662335d5b75",
+            "to": "FANTOM.DAI--0x8d11ec38a3eb5e956b052f67da8bdc9bef8abf3e",
+            "amount": "100000000"      
+        },
+        {
+            "swappers": ["MMFinance"],
+            "from": "CRONOS.USDT--0x66e428c3f67a68878562e79a0234c1f83c208770",
+            "to": "CRONOS.USDC--0xc21223249ca28397b4b6541dffaecc539bff0c59",
+            "amount": "100000000"      
+        },
+        {
+            "swappers": ["VVSFinance"],
+            "from": "CRONOS.USDT--0x66e428c3f67a68878562e79a0234c1f83c208770",
+            "to": "CRONOS.USDC--0xc21223249ca28397b4b6541dffaecc539bff0c59",
+            "amount": "100000000"      
+        },
+        {
+            "swappers": ["CronaSwap"],
+            "from": "CRONOS.USDT--0x66e428c3f67a68878562e79a0234c1f83c208770",
+            "to": "CRONOS.USDC--0xc21223249ca28397b4b6541dffaecc539bff0c59",
+            "amount": "100000000"      
+        },
+        {
+            "swappers": ["VoltageSwap"],
+            "from": "FUSE.FUSE",
+            "to": "FUSE.AGEUR--0xefaeee334f0fd1712f9a8cc375f427d9cdd40d73",
+            "amount": "10000000000000000000000"      
+        },
+        {
+            "swappers": ["SpaceFi"],
+            "from": "ZKSYNC.USDC--0x3355df6d4c9c3035724fd0e3914de96a5a83aaf4",
+            "to": "ZKSYNC.ETH",
+            "amount": "100000000"      
+        },
+        {
+            "swappers": ["OolongSwap"],
+            "from": "BOBA.USDC--0x66a2a913e447d6b4bf33efbec43aaef87890fbbc",
+            "to": "BOBA.ETH",
+            "amount": "100000000"      
+        },
+        {
+            "swappers": ["MDexHeco"],
+            "from": "HECO.HBTC--0x66a79d23e58475d2738179ca52cd0b41d73f0bea",
+            "to": "HECO.ETH--0x64ff637fb478863b7468bc97d30a5bf3a428a1fd",
+            "amount": "10000000000000000"      
+        },
+        {
+            "swappers": ["ApeSwap"],
+            "from": "TELOS.USDT--0xefaeee334f0fd1712f9a8cc375f427d9cdd40d73",
+            "to": "TELOS.TLOS",
+            "amount": "100000000"      
+        },
+        {
+            "swappers": ["StellaSwap"],
+            "from": "MOONBEAM.USDC--0x818ec0a7fe18ff94269904fced6ae3dae6d6dc0b",
+            "to": "MOONBEAM.GLMR",
+            "amount": "100000000"      
+        },
+        {
+            "swappers": ["BeamSwap"],
+            "from": "MOONBEAM.USDC--0x818ec0a7fe18ff94269904fced6ae3dae6d6dc0b",
+            "to": "MOONBEAM.GLMR",
+            "amount": "100000000"      
+        },
+        {
+            "swappers": ["BeamSwap"],
+            "from": "MOONBEAM.USDC--0x818ec0a7fe18ff94269904fced6ae3dae6d6dc0b",
+            "to": "MOONBEAM.GLMR",
+            "amount": "100000000"      
+        },
+        {
+            "swappers": ["SolarbeamSwap"],
+            "from": "MOONRIVER.USDT--0xb44a9b6905af7c801311e8f4e76932ee959c663c",
+            "to": "MOONRIVER.MOVR",
+            "amount": "100000000"      
+        },
+        {
+            "swappers": ["10KSwap"],
+            "from": "STARKNET.USDT--0x68f5c6a61780768455de69077e07e89787839bf8166decfbf92b645209c0fb8",
+            "to": "STARKNET.ETH--0x49d36570d4e46f48e99674bd3fcc84644ddd6b96f7c741b1562b82f9e004dc7",
+            "amount": "100000000"
+        }
+    ]
+}
