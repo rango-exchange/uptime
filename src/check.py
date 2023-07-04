@@ -1,6 +1,6 @@
 import requests, urllib, json, time, os
 from utils.rango import get_rango_quote_url, get_sample_routes, \
-    get_quote_or_throw_exception, get_swap_or_throw_exception
+    get_quote_or_throw_exception
 
 
 RANGO_API_KEY = os.environ.get('RANGO_API_KEY')

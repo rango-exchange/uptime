@@ -51,7 +51,6 @@ def get_quote_or_throw_exception(apy_key, src, dest, amount, swappers, slippage)
     response = requests.request("GET", url)
     result = response.json()
     result_type = result["resultType"]
-    # print(url)
     print(f'{swappers[0]} => {result_type}')
     if result_type != 'OK':
         print(f'{swappers}: {src} => {dest} [result = {result_type}]')
@@ -63,8 +62,19 @@ def get_swap_or_throw_exception(apy_key, src, dest, amount, swappers, slippage):
     result = response.json()
     result_type = result["resultType"]
     tx = result["tx"]
-    # print(url)
     print(f'{swappers[0]} => {result_type}')
-    # if result_type != 'OK' or not tx:
-    #     print(f'{swappers}: {src} => {dest} [result = {result_type}]')
-        # raise Exception(f'Swap not found for: {swappers}')
+    if result_type != 'OK' or not tx:
+        print(f'{swappers}: {src} => {dest} [result = {result_type}]')
+        raise Exception(f'Swap not found for: {swappers}')
+
+def get_swap_monitoring_keyword_per_blockchain(blockchain):
+    if blockchain in ['OSMOSIS', 'COSMOS', 'KUJIRA',  'JUNO']:
+        return 'signType'
+    elif blockchain in ['SOLANA']:
+        return 'txType'
+    elif blockchain in ['TRON']:
+        return 'raw_data'
+    elif blockchain in ['STARKNET']:
+        return 'calls'
+    else:
+        return 'txTo'

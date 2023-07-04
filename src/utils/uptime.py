@@ -108,7 +108,7 @@ class UptimeRobot:
                 return psp['id']
         return None
     
-    def create_psp(self, name, monitors_ids):
+    def create_psp(self, name, monitors_ids, domain, sort, password):
         url = "https://api.uptimerobot.com/v2/newPSP"
         params = {
             'api_key': self.api_key,
@@ -116,7 +116,10 @@ class UptimeRobot:
             'type': 1,
             'friendly_name': name,
             'monitors': '-'.join(monitors_ids),
-            'hide_url_links': True
+            'hide_url_links': True,
+            'custom_domain': domain,
+            'sort': sort,
+            'password': password
         }
         payload = urllib.parse.urlencode(params)
         headers = {
@@ -124,9 +127,9 @@ class UptimeRobot:
             'content-type': "application/x-www-form-urlencoded"
         }
         response = requests.request("POST", url, data=payload, headers=headers)
-        print(f'status: {response.status_code}')
+        print(f'status: {response.json()["stat"]}')
 
-    def edit_psp(self, id, name, monitors_ids):
+    def edit_psp(self, id, name, monitors_ids, domain, sort, password):
         url = "https://api.uptimerobot.com/v2/editPSP"
         params = {
             'api_key': self.api_key,
@@ -135,7 +138,10 @@ class UptimeRobot:
             'id': id,
             'friendly_name': name,
             'monitors': '-'.join(monitors_ids),
-            'hide_url_links': True
+            'hide_url_links': True,
+            'custom_domain': domain,
+            'sort': sort,
+            'password': password
         }
         payload = urllib.parse.urlencode(params)
         headers = {
@@ -145,12 +151,35 @@ class UptimeRobot:
         response = requests.request("POST", url, data=payload, headers=headers)
         print(f'status: {response.status_code}')
 
-    def create_or_update_psp(self, name, monitors_ids):
+    def create_or_update_psp(self, name, monitors_ids, domain, sort, password):
         all_psps = self.get_all_psps()
         psp_id = self.get_psp_id(all_psps, name)
         if psp_id:
             print(f"Found psp id: {psp_id} for {name}, editing psp ...")
-            self.edit_psp(psp_id, name, monitors_ids)
+            self.edit_psp(psp_id, name, monitors_ids, domain, sort, password)
         else:
             print(f"No psp found for {name}, creating new psp ...")
-            self.create_psp(name, monitors_ids)
+            self.create_psp(name, monitors_ids, domain, sort, password)
+
+    def delete_psp(self, id):
+        url = "https://api.uptimerobot.com/v2/deletePSP"
+        payload = f"api_key={self.api_key}&format=json&id={id}"
+        headers = {
+            'cache-control': "no-cache",
+            'content-type': "application/x-www-form-urlencoded"
+        }
+        response = requests.request("POST", url, data=payload, headers=headers)
+        print(f'status: {response.status_code}')
+
+    def filter_monitors(self, monitors, swappers, quote=False, swap=False):
+        swappers_monitors_ids = []
+        for monitor in monitors:
+            monitor_id = str(monitor['id'])
+            monitor_name = monitor['friendly_name']
+            monitor_name_cleaned = monitor_name.replace(' Quote', '').replace(' Swap', '')
+            if (not swappers or monitor_name_cleaned in swappers) and 'Basic' not in monitor_name:
+                if quote and monitor_name.endswith('Quote'):
+                    swappers_monitors_ids += [monitor_id]
+                elif swap and monitor_name.endswith('Swap'):
+                    swappers_monitors_ids += [monitor_id]
+        return swappers_monitors_ids
