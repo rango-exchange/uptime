@@ -50,32 +50,32 @@ for route in routes_list:
 # create all psps
 
 monitors = client.get_all_monitors()
-
+password = UPTIME_ROBOT_PSP_PASSWORD
 
 swappers_monitors_ids = client.filter_monitors(monitors, [], True, True)
-domain = f'https://swapper-status.{UPTIME_ROBOT_PSP_BASE_URL}'
-client.create_or_update_psp('Rango Swappers', swappers_monitors_ids, domain, 4, UPTIME_ROBOT_PSP_PASSWORD)
+domain = f'swapper-status.{UPTIME_ROBOT_PSP_BASE_URL}'
+client.create_or_update_psp('Rango Swappers', swappers_monitors_ids, domain, 4, password)
 
 swappers_monitors_ids = client.filter_monitors(monitors, bridges, True, True)
-domain = f'https://bridge-status.{UPTIME_ROBOT_PSP_BASE_URL}'
-client.create_or_update_psp('Rango Bridges', swappers_monitors_ids, domain, 4, UPTIME_ROBOT_PSP_PASSWORD)
+domain = f'bridge-status.{UPTIME_ROBOT_PSP_BASE_URL}'
+client.create_or_update_psp('Rango Bridges', swappers_monitors_ids, domain, 4, password)
 
 swappers_monitors_ids = client.filter_monitors(monitors, bridges, True, False)
-domain = f'https://bridge-quote-status.{UPTIME_ROBOT_PSP_BASE_URL}'
-client.create_or_update_psp('Rango Bridges > Quote', swappers_monitors_ids, domain, 4, UPTIME_ROBOT_PSP_PASSWORD)
+domain = f'bridge-quote-status.{UPTIME_ROBOT_PSP_BASE_URL}'
+client.create_or_update_psp('Rango Bridges > Quote', swappers_monitors_ids, domain, 4, password)
 
 swappers_monitors_ids = client.filter_monitors(monitors, bridges, False, True)
-domain = f'https://bridge-swap-status.{UPTIME_ROBOT_PSP_BASE_URL}'
-client.create_or_update_psp('Rango Bridges > Swap', swappers_monitors_ids, domain, 4, UPTIME_ROBOT_PSP_PASSWORD)
+domain = f'bridge-swap-status.{UPTIME_ROBOT_PSP_BASE_URL}'
+client.create_or_update_psp('Rango Bridges > Swap', swappers_monitors_ids, domain, 4, password)
 
 swappers_monitors_ids = client.filter_monitors(monitors, dexes, True, True)
-domain = f'https://dex-status.{UPTIME_ROBOT_PSP_BASE_URL}'
-client.create_or_update_psp('Rango DEXs', swappers_monitors_ids, domain, 4, UPTIME_ROBOT_PSP_PASSWORD)
+domain = f'dex-status.{UPTIME_ROBOT_PSP_BASE_URL}'
+client.create_or_update_psp('Rango DEXs', swappers_monitors_ids, domain, 4, password)
 
 swappers_monitors_ids = client.filter_monitors(monitors, dexes, True, False)
-domain = f'https://dex-quote-status.{UPTIME_ROBOT_PSP_BASE_URL}'
-client.create_or_update_psp('Rango DEXs > Quote', swappers_monitors_ids, domain, 4, UPTIME_ROBOT_PSP_PASSWORD)
+domain = f'dex-quote-status.{UPTIME_ROBOT_PSP_BASE_URL}'
+client.create_or_update_psp('Rango DEXs > Quote', swappers_monitors_ids, domain, 4, password)
 
 swappers_monitors_ids = client.filter_monitors(monitors, dexes, False, True)
-domain = f'https://dex-swap-status.{UPTIME_ROBOT_PSP_BASE_URL}'
-client.create_or_update_psp('Rango DEXs > Swap', swappers_monitors_ids, domain, 4, UPTIME_ROBOT_PSP_PASSWORD)
+domain = f'dex-swap-status.{UPTIME_ROBOT_PSP_BASE_URL}'
+client.create_or_update_psp('Rango DEXs > Swap', swappers_monitors_ids, domain, 4, password)

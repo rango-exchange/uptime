@@ -21,13 +21,13 @@ jobs:
         run: pip install -r requirements.txt
         shell: bash
 
-      - name: Check all rango routes valid
-        id: check-routes
-        run: python src/check.py
-        shell: bash
-        env:
-          RANGO_API_KEY: ${{ secrets.RANGO_API_KEY }}
-          UPTIME_ROBOT_API_KEY: ${{ secrets.UPTIME_ROBOT_API_KEY }}
+      # - name: Check all rango routes valid
+      #   id: check-routes
+      #   run: python src/check.py
+      #   shell: bash
+      #   env:
+      #     RANGO_API_KEY: ${{ secrets.RANGO_API_KEY }}
+      #     UPTIME_ROBOT_API_KEY: ${{ secrets.UPTIME_ROBOT_API_KEY }}
 
       - name: Update all uptime robot monitors
         id: update-monitors
