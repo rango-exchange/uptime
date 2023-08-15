@@ -46,7 +46,8 @@
             "swappers": ["Avalanche Bridge"],
             "from": "ETH.USDT--0xdac17f958d2ee523a2206206994597c13d831ec7",
             "to": "AVAX_CCHAIN.USDT.E--0xc7198437980c041c805a1edcba50c1ce5db95118",
-            "amount": "100000000"      
+            "amount": "100000000",
+            "paused": true      
         },
         {
             "swappers": ["Optimism Bridge"],
@@ -88,7 +89,8 @@
             "swappers": ["Wormhole"],
             "from": "ETH.USDC--0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
             "to": "FANTOM.USDC--0x2ec752329c3eb419136ca5e4432aa2cdb1ea23e6",
-            "amount": "100000000"      
+            "amount": "100000000",
+            "paused": true
         },
         {
             "swappers": ["Arbitrum Bridge"],
@@ -98,15 +100,16 @@
         },
         {
             "swappers": ["cBridge v2.0"],
-            "from": "AVAX_CCHAIN.USDC.E--0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664",
-            "to": "AURORA.USDC--0xb12bfca5a55806aaf64e99521918a4bf0fc40802",
-            "amount": "100000000"      
+            "from": "BSC.ETH--0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+            "to": "POLYGONZK.ETH",
+            "amount": "1000000000000000000"      
         },
         {
             "swappers": ["DeBridge"],
             "from": "BSC.USDC--0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
             "to": "POLYGON.USDC--0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
-            "amount": "100000000000000000000"      
+            "amount": "100000000000000000000",
+            "paused": true
         }
     ],
     "dexes": [
@@ -156,7 +159,8 @@
             "swappers": ["SpookySwap"],
             "from": "FANTOM.USDC--0x04068da6c83afcfa0e13ba15a6696662335d5b75",
             "to": "FANTOM.FTM",
-            "amount": "100000000"      
+            "amount": "100000000",
+            "paused": true      
         },
         {
             "swappers": ["PancakeSwapBsc"],
