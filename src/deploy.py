@@ -25,8 +25,8 @@ if not UPTIME_ROBOT_PSP_BASE_URL:
 client = UptimeRobot(api_key=UPTIME_ROBOT_API_KEY)
 
 routes_json = get_sample_routes()
-dex_routes = [route for route in routes['dexes'] if not route.get('paused')]
-bridges_routes = [route for route in routes['bridges'] if not route.get('paused')]
+dex_routes = [route for route in routes_json['dexes'] if not route.get('paused')]
+bridges_routes = [route for route in routes_json['bridges'] if not route.get('paused')]
 routes_list = dex_routes + bridges_routes
 bridges = [item['swappers'][0] for item in bridges_routes]
 dexes = [item['swappers'][0] for item in dex_routes]
