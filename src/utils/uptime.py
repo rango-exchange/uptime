@@ -49,7 +49,7 @@ class UptimeRobot:
         response = requests.request("POST", base_url, data=payload, headers=headers)
         print(f'status: {response.status_code}')
 
-    def edit_monitor(self, id, name, url, keyword, interval):
+    def edit_monitor(self, id, name, url, keyword, interval, paused):
         base_url = "https://api.uptimerobot.com/v2/editMonitor"
         params = {
             'api_key': self.api_key,
@@ -60,7 +60,8 @@ class UptimeRobot:
             'type': 2,
             'keyword_type': 2,
             'keyword_value': keyword,
-            'interval': interval
+            'interval': interval,
+            'paused': 0 if paused else 1
         }
         payload = urllib.parse.urlencode(params)
         headers = {
@@ -70,12 +71,12 @@ class UptimeRobot:
         response = requests.request("POST", base_url, data=payload, headers=headers)
         print(f'status: {response.status_code}')
 
-    def create_or_update_monitor(self, name, url, keyword, interval):
+    def create_or_update_monitor(self, name, url, keyword, interval, paused):
         all_monitors = self.get_all_monitors()
         monitor_id = self.get_monitor_id(all_monitors, name)
         if monitor_id:
             print(f"Found monitor id: {monitor_id} for {name}, editing monitor ...")
-            self.edit_monitor(monitor_id, name, url, keyword, interval)
+            self.edit_monitor(monitor_id, name, url, keyword, interval, paused)
         else:
             print(f"No monitor found for {name}, creating new monitor ...")
             self.create_monitor(name, url, keyword, interval)
@@ -174,6 +175,7 @@ class UptimeRobot:
     def filter_monitors(self, monitors, swappers, quote=False, swap=False):
         swappers_monitors_ids = []
         for monitor in monitors:
+            print(monitor)
             monitor_id = str(monitor['id'])
             monitor_name = monitor['friendly_name']
             monitor_name_cleaned = monitor_name.replace(' Quote', '').replace(' Swap', '')

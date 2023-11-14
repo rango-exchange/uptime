@@ -25,8 +25,8 @@ if not UPTIME_ROBOT_PSP_BASE_URL:
 client = UptimeRobot(api_key=UPTIME_ROBOT_API_KEY)
 
 routes_json = get_sample_routes()
-dex_routes = [route for route in routes_json['dexes'] if not route.get('paused')]
-bridges_routes = [route for route in routes_json['bridges'] if not route.get('paused')]
+dex_routes = [route for route in routes_json['dexes']]
+bridges_routes = [route for route in routes_json['bridges']]
 routes_list = dex_routes + bridges_routes
 bridges = [item['swappers'][0] for item in bridges_routes]
 dexes = [item['swappers'][0] for item in dex_routes]
@@ -34,19 +34,20 @@ dexes = [item['swappers'][0] for item in dex_routes]
 for route in routes_list:
     interval = "300"
     swappers = '-'.join(route['swappers'])
+    paused = route.get('paused', False)
     
     # create quote monitor
     monitor_url = get_rango_quote_url(RANGO_API_KEY, route['from'], route['to'], route['amount'], route['swappers'], 3)
     monitor_name = f'{swappers} Quote'
     keyword_value = "OK"
-    client.create_or_update_monitor(monitor_name, monitor_url, keyword_value, interval)
+    client.create_or_update_monitor(monitor_name, monitor_url, keyword_value, interval, paused)
     
     # create swap monitor
     monitor_url = get_rango_swap_url(RANGO_API_KEY, route['from'], route['to'], route['amount'], route['swappers'], 3)
     monitor_name = f'{swappers} Swap'
     from_blockchain = route['from'].split('.')[0]
     keyword_value = get_swap_monitoring_keyword_per_blockchain(from_blockchain)
-    client.create_or_update_monitor(monitor_name, monitor_url, keyword_value, interval)
+    client.create_or_update_monitor(monitor_name, monitor_url, keyword_value, interval, paused)
 
 
 # create all psps
