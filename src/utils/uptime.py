@@ -175,8 +175,11 @@ class UptimeRobot:
     def filter_monitors(self, monitors, swappers, quote=False, swap=False):
         swappers_monitors_ids = []
         for monitor in monitors:
-            print(monitor)
             monitor_id = str(monitor['id'])
+            status = monitor['status']
+            # ignore paused monitors
+            if status == 0:
+                continue
             monitor_name = monitor['friendly_name']
             monitor_name_cleaned = monitor_name.replace(' Quote', '').replace(' Swap', '')
             if (not swappers or monitor_name_cleaned in swappers) and 'Basic' not in monitor_name:
