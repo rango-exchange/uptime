@@ -61,7 +61,7 @@ class UptimeRobot:
             'keyword_type': 2,
             'keyword_value': keyword,
             'interval': interval,
-            'paused': 0 if paused else 1
+            'status': 0 if paused else 1
         }
         payload = urllib.parse.urlencode(params)
         headers = {
